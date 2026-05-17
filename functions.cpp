@@ -97,7 +97,7 @@ int main()
 	return 0;
 }*/
 
-#include <iostream>
+/*#include <iostream>
 using namespace std;
 
 const double Pi = 3.14159265;
@@ -117,4 +117,39 @@ int main()
 	cout << "Double is: " << DoubleNum(inputNum) << endl;
 
 	return 0;
+}*/
+
+
+// lambda functions to display elements in an array and sort them
+#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+
+void DisplayName(vector<int>& dynArray)
+{
+	for_each(dynArray.begin(), dynArray.end(), \
+		[](int Element) {cout << Element << " ";});
+
+	cout << endl;
 }
+
+int main()
+{
+	vector<int> myNums;
+	myNums.push_back(501);
+	myNums.push_back(-5);
+	myNums.push_back(11);
+
+	DisplayName(myNums);
+
+	cout << "Sorting elements in ascending order" << endl;
+
+	sort(myNums.begin(), myNums.end(), \
+		[](int Num1, int Num2) {return (Num2 > Num1);});
+
+	DisplayName(myNums);
+
+	return 0;
+}
+
