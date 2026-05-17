@@ -42,7 +42,7 @@ void SayHello()
 
 */
 
-#include <iostream>
+/*#include <iostream>
 using namespace std;
 
 void DisplayArray(int numbers[], int length)
@@ -67,5 +67,54 @@ int main()
 	char myStatement[7] = { 'H', 'e', 'l', 'l', 'o', '!', '\0' };
 	DisplayArray(myStatement, 7);
 	
+	return 0;
+}
+*/
+
+/*#include <iostream>
+using namespace std;
+
+const double Pi = 3.1416;
+
+// output parameter result by reference
+
+void Area(double radius, double& result)
+{
+	result = Pi * radius * radius;
+}
+
+int main()
+{
+	double radius = 0;
+	cout << "Enter radius: " << endl;
+	cin >> radius;
+
+	double areaFetched = 0;
+	Area(radius, areaFetched);
+
+	cout << "The area is: " << areaFetched << endl;
+
+	return 0;
+}*/
+
+#include <iostream>
+using namespace std;
+
+const double Pi = 3.14159265;
+
+inline long DoubleNum(int inputNum)
+{
+	return inputNum * 2;
+}
+
+int main()
+{
+	cout << "Enter an integer: ";
+	int inputNum = 0;
+	cin >> inputNum;
+
+	//Call inline function
+	cout << "Double is: " << DoubleNum(inputNum) << endl;
+
 	return 0;
 }
